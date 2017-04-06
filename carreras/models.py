@@ -17,18 +17,17 @@ class Carrera(models.Model):
 		return self.nombre
 
 class Modulo(models.Model):
-	nombre = models.CharField(max_length=70)
+	nombre = models.CharField(max_length=140)
 	carrera = models.ForeignKey(Carrera, related_name='modulos')
-	imagen = models.ImageField(upload_to="assets/carreras/modulos/", null=True, blank=True)
 
 	def __str__(self):
-		return self.nombre
+		return self.nombre[:3]
 
 class SubModulo(models.Model):
-	nombre = models.CharField(max_length=70)
+	nombre = models.CharField(max_length=140)
 	desc = models.TextField()
 	modulo = models.ForeignKey(Modulo, related_name='submodulos')
 	imagen = models.ImageField(upload_to="assets/carreras/modulos/", null=True, blank=True)
 
 	def __str__(self):
-		return self.nombre
+		return self.nombre[:5]

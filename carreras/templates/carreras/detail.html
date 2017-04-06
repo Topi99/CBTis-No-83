@@ -1,13 +1,46 @@
 {%extends 'base.html'%}
 
+{% block portada %}
+	<img src="{{carrera.imagen.url}}" alt="">
+{% endblock portada %}
+
 {%block content%}
 	<h1 class="thin">
 		{{carrera.nombre}}
 	</h1>
 	<p class="flow-text">{{carrera.cuerpo}}</p>
 
-	<div class="modulos">
-		
+	<div class="modulos padding">
+		<h2 class="thin">Modulos</h2>
+		{% for m in carrera.modulos.all %}
+
+			<div class="row">
+				<p class="bold col-xs-12 flow-text">{{m.nombre}}</p>
+			
+				{% for sm in m.submodulos.all %}
+					
+					<article class="col-sm-4 col-xs-12">
+						<div class="simple-card z-depth-2 ">
+							<div class="card-image">
+								<img src="{{sm.imagen.url}}" alt="">
+							</div>
+							<div class="card-info">
+								<p class="card-title">{{sm.nombre}}</p>
+								<p class="card-desc">
+									{{sm.desc}}
+								</p>
+							</div>
+						</div>
+					</article>
+
+				{% endfor %}		
+			</div>
+
+		{% endfor %}
 	</div>
 
 {%endblock content%}
+
+{% block scripts %}
+	$('.parallax').parallax();
+{% endblock scripts %}

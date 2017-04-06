@@ -36,16 +36,29 @@
   </div>
   
 
-  <header class="portada">
-    {% block portada %}
-      
-    {% endblock portada %}
+  <header class="portada parallax-container">
+    <div class="parallax">
+      {% block portada %}
+          
+      {% endblock portada %}
+    </div>
   </header>
 
-  <div class="content">
+  <div class="content ">
     {% block content %}    
     {% endblock content %}    
   </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      {% block scripts %}
+        
+      {% endblock scripts %}
+    })
+  </script>
 
 </body>
 </html>
