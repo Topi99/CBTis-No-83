@@ -1,0 +1,51 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+        <title>¡Bienvenido!</title>
+        <!-- Materialize CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <!-- FlexboxGrid CSS Layout -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+
+        <link rel="stylesheet" href="{%static 'css/main.css'%}">
+
+</head>
+<body>
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper blue darken-3">
+        <a href="{% url 'main:home' %}" class="brand-logo">CBTis No. 83</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{% url 'main:home' %}#carreras">Carreras</a></li>
+          <li><a href="{% url 'main:home' %}#noticias">Noticias</a></li>
+          <li><a href="{% url 'main:home' %}#contactanos">Contactanos</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="{% url 'main:home' %}#carreras">Carreras</a></li>
+          <li><a href="{% url 'main:home' %}#noticias">Noticias</a></li>
+          <li><a href="{% url 'main:home' %}#contactanos">Contactanos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+
+  <header class="portada">
+    {% block portada %}
+      
+    {% endblock portada %}
+  </header>
+
+  <div class="content">
+    {% block content %}    
+    {% endblock content %}    
+  </div>
+
+</body>
+</html>

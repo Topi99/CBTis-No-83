@@ -1,0 +1,135 @@
+body, html{
+  padding: 0;
+  margin: 0;
+  color: #272822;
+}
+
+img{
+  width: 100%;
+}
+
+h1, h2, h3, h4{
+	margin-top: 0 !important;
+}
+
+nav{
+	position: fixed;
+	z-index: 100;
+}
+
+blockquote{
+	border-left: 5px solid #1565C0 !important; 
+}
+
+.content{
+	width: 90%;
+	margin-left: 5% !important;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 7px 10px rgba(50,50,50,.55);
+}
+
+.thin{
+	font-weight: thin;
+}
+
+.condensed-light{
+	font-weight: condensed-light;
+}
+
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.simple-card{
+  background-color: white;
+  border-radius: 5px;
+}
+  .card-image, .card-image img{
+    border-radius: 5px 5px 0px 0px;
+    height: 260px;
+  }
+
+  .card-info{
+    margin: 0;
+    padding: 10px;
+  }
+    .card-title{
+			font-size: 135%;
+    }
+    .card-desc{
+			color: #525252;
+    }
+
+.grid .col-md-4{
+	width: 23.5% !important;
+}
+
+#sidenav-overlay{
+  z-index: 99 !important;
+}
+
+.parallax img{
+  z-index: -2;
+}
+
+.parallax-container{
+  box-shadow: inset 0px -30px 60px rgba(0,0,0,.7) !important;
+}
+
+.titulo{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  text-transform: capitalize;
+  padding: 15px;
+  padding-top: 30px;
+  width: 100%;
+  color: white;
+}
+
+.cover{
+  background-image: url('../img/cover.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  padding: 20px;
+}
+
+  div.title-div{
+    width: 80%;
+    height: 560px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,.85);
+    text-align: center;
+    padding: 50px;
+  }
+    h1{
+			font-size: 6em;
+    }
+
+#carreras{
+  margin-top: 0;
+}
+  section article div{
+          margin-top: 20px;
+  }
+
+#noticias{
+  background-color: #CADCFF;
+}
+
+.little-padding{
+  padding: 15px;
+}
+
+.padding{
+  padding: 30px;
+}
+
+.large-padding{
+	padding: 50px;
+}
+        

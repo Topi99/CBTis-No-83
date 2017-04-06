@@ -1,0 +1,24 @@
+{%extends 'base2.html'%}
+
+
+{%block content%}
+	
+	<section id="carreras" class="row"> <!--  large-padding col-md-10 col-md-offset-1 box -->
+		<h2>Carreras</h2>
+		{% for c in carreras %}
+
+			<article class="col-sm-12 row">
+				<div class="col-md-6">
+	        <img src="{{c.imagen.url}}" alt="">
+		      </div>
+		      <div class="col-md-6 top-md">
+            <h2>{{c.nombre}}</h2>
+            <blockquote> {{c.get_desc}} </blockquote>
+            <a href="{{c.get_absolute_url}}" class="mdl-button mdl-js-button mdl-js-ripple-effect">Detalles</a>
+	      </div>
+			</article>
+
+		{% endfor %}
+	</section>
+
+{%endblock content%}
