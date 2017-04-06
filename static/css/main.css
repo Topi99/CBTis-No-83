@@ -21,12 +21,22 @@ blockquote{
 	border-left: 5px solid #1565C0 !important; 
 }
 
+footer{
+	background-color: #464646 !important;
+}
+
+.all{
+	padding-bottom: 1.5em;
+  background-color: #E2E1E2;
+}
+
 .content{
 	width: 90%;
 	margin-left: 5% !important;
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 0px 0px 5px 5px;
 	box-shadow: 0px 7px 15px rgba(50,50,50,.6);
+	background-color: white;
 }
 
 .thin{
@@ -49,6 +59,7 @@ blockquote{
 .simple-card{
   background-color: white;
   border-radius: 5px;
+  margin-bottom: 1em;
 }
   .card-image, .card-image img{
     border-radius: 5px 5px 0px 0px;
@@ -75,11 +86,11 @@ blockquote{
 }
 
 .parallax img{
-  z-index: -2;
+  z-index: -1;
 }
 
 .parallax-container{
-  box-shadow: inset 0px -30px 60px rgba(0,0,0,.7) !important;
+  box-shadow: inset 0px -60px 90px rgba(0,0,0,.75) !important;
 }
 
 .titulo{

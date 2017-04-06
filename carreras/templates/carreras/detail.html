@@ -1,13 +1,17 @@
 {%extends 'base.html'%}
 
+{% block titulo %}
+	<h1 class="titulo">
+		{{carrera.nombre}}
+	</h1>
+{% endblock titulo %}
+
 {% block portada %}
 	<img src="{{carrera.imagen.url}}" alt="">
+	
 {% endblock portada %}
 
 {%block content%}
-	<h1 class="thin">
-		{{carrera.nombre}}
-	</h1>
 	<p class="flow-text">{{carrera.cuerpo}}</p>
 
 	<div class="modulos padding">
