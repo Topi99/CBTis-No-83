@@ -7,6 +7,7 @@ class DetailCarrera(View):
 	def get(self, request, nombre):
 		template_name = 'carreras/detail.html'
 		carrera = get_object_or_404(Carrera, nombre=nombre)
+
 		context = {
 			'carrera':carrera,
 		}

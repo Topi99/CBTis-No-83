@@ -1,10 +1,10 @@
 {%load static%}
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>¡Bienvenido!</title>
         <!-- Materialize CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -36,29 +36,39 @@
     </nav>
   </div>
 
-	<header class="cover col-sm-12">
+	<header class="cover">
+    
+    <video autoplay loop>
+      <source src="{%static 'video/Erase-And-Rewind.mp4'%}" type="video/mp4">
+    </video>
+
 	  <div class="title-div">
 		  <h1>CBTis No. 83</h1>
-		  <h2>Esta es una descripción, no se que poner</h2>
-		  <h3>Una ultima descripción</h3>
-		  <a href="#carreras" class="waves-effect waves-light btn">
+		  <h2>La mejor institución de la región.</h2>
+		  <a href="#conocenos" class="waves-effect waves-light btn blue darken-3">
 				Conocenos
 		  </a>
 	  </div>
 	</header>
 
-  <div class="all">
-    <div class="content ">
-      {% block content %}    
-      {% endblock content %}    
+  <main class="all" id="conocenos">
+    <!--
+    <div class="content "> 
     </div>
-  </div>
+    -->
+    {% block content %}
+      
+    {% endblock content %}
+  </main>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
   <script>
   	$(document).ready(function(){
   		$(".button-collapse").sideNav();
+      {% block scripts %}
+        
+      {% endblock scripts %}
   	})
   </script>
 

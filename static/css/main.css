@@ -26,29 +26,36 @@ footer{
 }
 
 .all{
-	padding-bottom: 1.5em;
-  background-color: #E2E1E2;
+  padding: 1.5em;
+  background-color: #F5F8FA;
 }
 
 .content{
-	width: 90%;
-	margin-left: 5% !important;
-	padding: 10px;
-	border-radius: 0px 0px 5px 5px;
-	box-shadow: 0px 7px 15px rgba(50,50,50,.6);
-	background-color: white;
+  width: 90%;
+  margin-left: 5% !important;
+  padding: 10px;
+  border-radius: 0px 0px 5px 5px; 
+  /* box-shadow: 0px 7px 15px rgba(50,50,50,.6); */
+
+  border: 1px solid #E6ECF0;
+  background-color: white;
+}
+
+.md ul li{
+  list-style: disc;
+  margin-left: 25px;
 }
 
 .thin{
-	font-weight: thin;
+  font-weight: thin;
 }
 
 .condensed-light{
-	font-weight: condensed-light;
+  font-weight: condensed-light;
 }
 
 .bold{
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .row{
@@ -56,14 +63,24 @@ footer{
   margin-right: 0;
 }
 
+.section-name{
+  color: #66757F;
+}
+
 .simple-card{
   background-color: white;
   border-radius: 5px;
   margin-bottom: 1em;
+  border: 1px solid #E6ECF0;
 }
   .card-image, .card-image img{
     border-radius: 5px 5px 0px 0px;
     height: 260px;
+    margin-top: 0;
+  }
+
+  .card-image.no-force, .card-image.no-force img{
+    height: initial;
   }
 
   .card-info{
@@ -71,14 +88,25 @@ footer{
     padding: 10px;
   }
     .card-title{
-			font-size: 135%;
+      font-size: 135%;
     }
     .card-desc{
-			color: #646464;
+      color: #646464;
     }
+    .card-options{
+      border-top: 1px solid #E6ECF0;
+      margin: 0 !important;
+      padding: 10px;
+    }
+      a.option{ /* Debe usar flexbox para autoajustar el ancho de los elementos */
+        color: #4EADC0;
+      }
+      a.option:hover{
+        color: initial;
+      }
 
 .grid .col-md-4{
-	width: 23.5% !important;
+  width: 23.5% !important;
 }
 
 #sidenav-overlay{
@@ -105,24 +133,35 @@ footer{
 }
 
 .cover{
-  background-image: url('../img/cover.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 700px;
-  padding: 20px;
+  height: 85vh;
 }
 
+  video{
+    position: fixed;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+  }
+
   div.title-div{
-    width: 80%;
-    height: 560px;
-    margin: 0 auto;
-    background-color: rgba(255,255,255,.85);
+    width: 100%;
+    min-height: 50vh;
+    margin: 15vh auto;
     text-align: center;
     padding: 50px;
+    color: black;
+    opacity: .85;
   }
-    h1{
-			font-size: 6em;
+    div.title-div h1{
+			font-size: 12vh;
+    }
+
+    div.title-div h2{
+      font-size: 5vh;
     }
 
 #carreras{
@@ -147,4 +186,11 @@ footer{
 .large-padding{
 	padding: 50px;
 }
-        
+
+/*
+@media screen and (max-width: 600px){
+  div.title-div{
+    width: 100%;
+  }
+}
+*/

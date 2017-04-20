@@ -11,6 +11,8 @@ urlpatterns = [
     r'^carreras/',
     include(CarrerasUrls, namespace='carreras')
   ),
+  url(r'^markdown/', include( 'django_markdown.urls')),
+
 	url(
 		r'^',
 		include(MainUrls, namespace='main')

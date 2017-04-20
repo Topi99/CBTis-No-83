@@ -3,7 +3,13 @@ from . import views
 
 urlpatterns = [
 	url(
+		r'^post/(?P<slug>[-\w]+)$',
+		views.DetailPost.as_view(),
+		name='detail'
+	),
+	url(
 		r'^$',
 		views.Home.as_view(), name='home'
 	),
+
 ]

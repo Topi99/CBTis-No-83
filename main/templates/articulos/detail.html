@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{% load markdown_deux_tags %}
+
+{% block titulo %}
+	<h1 class="titulo">
+		{{post.nombre}} 
+	</h1>
+{% endblock titulo %}
+
+{% block portada %}
+	<img src="{{post.imagen.url}}" alt="">
+{% endblock portada %}
+
+{%block content%}
+	<p><b>{{post.tipo}}</b></p>
+	<div class="flow-text">
+			{{post.cuerpo|markdown}}
+	</div>
+
+{%endblock content%}

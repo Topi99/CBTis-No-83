@@ -1,4 +1,5 @@
 {%extends 'base.html'%}
+{% load markdown_deux_tags %}
 
 {% block titulo %}
 	<h1 class="titulo">
@@ -12,7 +13,7 @@
 {% endblock portada %}
 
 {%block content%}
-	<p class="flow-text">{{carrera.cuerpo}}</p>
+	<div class="flow-text md">{{carrera.cuerpo|markdown}}</div>
 
 	<div class="modulos padding">
 		<h2 class="thin">Modulos</h2>
@@ -23,8 +24,8 @@
 			
 				{% for sm in m.submodulos.all %}
 					
-					<article class="col-sm-4 col-xs-12">
-						<div class="simple-card z-depth-2 ">
+					<article class="col-sm-4">
+						<div class="simple-card ">
 							<div class="card-image">
 								<img src="{{sm.imagen.url}}" alt="">
 							</div>
