@@ -41,6 +41,11 @@ footer{
   background-color: white;
 }
 
+p.tipo{
+  color: #66757F;
+  text-transform: capitalize;
+}
+
 .md ul li{
   list-style: disc;
   margin-left: 25px;

@@ -1,0 +1,26 @@
+{% load markdown_deux_tags %}
+
+<section id="institucion" class="cascade row">
+
+	<h5 class="section-name col col-xs-12">{{posts.0.get_tipo_display}}</h5>
+
+	{% for p in posts %}
+		<article class="col col-sm-4 col-xs-12">
+			<div class="simple-card ">
+				<div class="card-image no-force	">
+					<img src="{{p.imagen.url}}" alt="">
+				</div>
+				<div class="card-info">
+					<p class="card-title">{{p.nombre}}</p>
+					<div class="card-desc">
+						{{p.desc|markdown}}
+					</div>
+				</div>
+				<div class="card-options row center-xs">
+					<a href="{{p.get_absolute_url}}" class="option col-xs waves-effect waves-light btn-flat ">ver más</a>
+				</div>
+			</div>
+		</article>
+	{% endfor %}
+
+</section>

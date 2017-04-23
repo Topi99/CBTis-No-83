@@ -63,12 +63,22 @@
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script>
   	$(document).ready(function(){
   		$(".button-collapse").sideNav();
       {% block scripts %}
-        
       {% endblock scripts %}
+
+
+        
+      $('.cascade').masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.col ',
+        // use element for option
+        columnWidth: '.col-sm-4',
+        percentPosition: true
+      })
   	})
   </script>
 

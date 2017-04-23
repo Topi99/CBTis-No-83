@@ -1,34 +1,14 @@
 {%extends 'base2.html'%}
-{% load markdown_deux_tags %}
+{% load posts_tags %}
 
 {%block content%}
 	
-	<section id="institucion" class=" row">
-
-		<h5 class="section-name col-xs-12">Nuestra Institución</h5>
-
-		{% for i in posts_institucion %}
-			<article class="col-sm-4 col-xs-12">
-				<div class="simple-card ">
-					<div class="card-image no-force	">
-						<img src="{{i.imagen.url}}" alt="">
-					</div>
-					<div class="card-info">
-						<p class="card-title">{{i.nombre}}</p>
-						<div class="card-desc">
-							{{i.desc|markdown}}
-						</div>
-					</div>
-					<div class="card-options row center-xs">
-						<a href="{{i.get_absolute_url}}" class="option col-xs waves-effect waves-light btn-flat ">Detalles</a>
-					</div>
-				</div>
-			</article>
-		{% endfor %}
-	</section>
+	{% for t in tipos %}
+		{%posts_tipo t%}
+	{% endfor %}
 
 	<section id="carreras" class="row"> <!--  large-padding col-md-10 col-md-offset-1 box -->
-		<h5 class="section-name">Carreras</h5>
+		<h5 class="section-name col col-xs-12">Carreras</h5>
 		{% for c in carreras %}
 
 			<article class="col-sm-12 row middle-xs">
@@ -50,5 +30,4 @@
 {%endblock content%}
 
 {% block scripts %}
-
 {% endblock scripts %}

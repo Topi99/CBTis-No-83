@@ -3,7 +3,7 @@
 
 {% block titulo %}
 	<h1 class="titulo">
-		{{post.nombre}} 
+		{{post.nombre}}
 	</h1>
 {% endblock titulo %}
 
@@ -13,8 +13,8 @@
 {% endblock portada %}
 
 {%block content%}
-	<p><b>{{post.tipo}}</b></p>
-	<div class="flow-text">
+	<p class="tipo">{{post.tipo}}</p>
+	<div class="flow-text md">
 			{{post.cuerpo|markdown}}
 	</div>
 

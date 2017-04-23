@@ -7,15 +7,22 @@ class Home(View):
 	def get(self, request):
 		template_name = 'main/home.html'
 		carreras = Carrera.objects.all()
-		nombres_carr = []
-		posts_institucion = Articulo.objects.filter(tipo='institucion')
 
-		for n in carreras:
-			nombres_carr.append(n)
+		tipos = [
+			'institucion',
+			'info_academica',
+			'noticia',
+			'extraescolares',
+			'docentes_escolares',
+		]
+
+		# posts_institucion = Articulo.objects.filter(tipo='institucion')
+
 
 		context = {
-			'names_carr': nombres_carr, 
-			'posts_institucion':posts_institucion,
+			'carreras': carreras, 
+			# 'posts_institucion':posts_institucion,
+			'tipos': tipos
 		}
 
 		return render(request, template_name, context)
