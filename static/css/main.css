@@ -199,3 +199,12 @@ p.tipo{
   }
 }
 */
+
+@media only screen and (max-width: 650px){
+  .all{
+    padding: .5em;
+  }
+  .content{
+    padding: 5px;
+  }
+}
